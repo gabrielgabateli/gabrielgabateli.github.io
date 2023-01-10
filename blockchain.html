@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>blockchain</title>
+</head>
+
+<body>
+    <div id="big">
+        <div id="main">
+            <p><a href="site.html">main page</a> | <a href="hub.html">other posts</a></p>
+            <h1>Introdução</h1>
+            <p>Muito se fala sobre blockchain. Mas, como essa tecnologia funciona? Quais problemas ela resolve? Quais
+                são os seus benefícios?</p>
+            <h2>O problema da confiança</h2>
+            <p>O principal problema que a blockchain se propõe a resolver é o problema da confiança de uma transação.
+                Por conta do fator humano, qualquer transação pode simplesmente não ocorrer, prejudicando um dos lados.
+            </p>
+            <p>Por conta da globalização, vivemos em uma sociedade muito avançada, podendo realizar transações com
+                pessoas do outro lado do mundo. A partir disso, há um problema: Quem pode garantir que alguém é
+                confiável?</p>
+            <p>De uma maneira geral, o problema da confiança é resolvido através de um <em>terceiro de confiança</em>.
+                Esse terceiro trata-se de alguém que, por possuir a confiança de ambas as partes, <em>intermedeia a
+                    transação</em> e garante que as duas partes irão cumprir suas obrigações.</p>
+            <p>Algumas instituições são <em>terceiras de confiança</em> por força da lei, o que é conhecido como <em>fé
+                    pública</em>. Exemplos: Oficiais de justiça, tabeliães, escrivães de polícia, etc.</p>
+            <p>Porém, essa solução também gera problemas:</p>
+            <ul>
+                <li>A transação, por ter processos a mais, se torna mais lenta e burocrática;</li>
+                <li>O terceiro de confiança irá cobrar um valor para fazer esse trabalho; Confiança custa caro!</li>
+                <li>Dependendo da transação, diversos intermediários são envolvidos, tornando o processo ainda mais caro
+                    e aumentando ainda mais a lentidão do processo.</li>
+            </ul>
+            <h2 >O livro-razão</h2>
+            <p>Outro ponto importante que envolve as transações é que estas precisam ser <em>registradas</em> em um
+                lugar confiável para verificação posterior. Se, anos depois, uma das partes alegar que não recebeu o que
+                deveria, é preciso analisar todos os registros efetuados na transação para determinar se a alegação é
+                verdadeira ou falsa.</p>
+            <p>Transações financeiras são registradas em um sistema conhecido como <em>livro-razão</em> ou
+                <em>ledger</em>, que disponibiliza de forma ordenada e detalhada várias operações de crédito e débito,
+                compondo um balanço final.</p>
+            <p><strong><em>Exemplo:</em></strong>
+                ![[Pasted image 20220927164412.png]]</p>
+            <p>Em um sistema tradicional, quem detém o livro-razão é o <em>banco</em>, além de também deter todo o
+                dinheiro envolvido na transação. As partes apenas comunicam a intenção de realizar a transação.</p>
+            <p>O problema dese método é que, para que tudo corra bem, <em>ambas as partes devem confiar plenamente</em>
+                no intermediário, que nesse caso é o banco. E, como já foi pontuado anteriormente, confiança custa caro.
+            </p>
+            <h2>O livro-razão distribuído</h2>
+            <p>Uma solução inusitada para esse problema é <em>distribuir o livro-razão para ambas as partes</em>, além
+                de <em>adicionar testemunhas</em> a transação. Dessa forma, caso alguém tente fraudar uma transação,
+                existirão diversos livros-razão que identificarão e refutarão a fraude. Dessa forma, livros-razão
+                discrepantes e fraudulentos são descartados, pois passa a valer o que diz a maioria.</p>
+            <p>Um outro problema que surge é: </p>
+            <ul>
+                <li>Se um dos lados da transação convencer a maioria das testemunhas a mentir, a fraude ainda sim pode
+                    ser feita!</li>
+            </ul>
+            <p>E sim, isso é verdade e se chama <strong>ataque de 51%</strong>. Porém, quanto maior a quantidade de
+                membros que esse sistema possuir, maior a dificuldade de executar essa fraude.</p>
+            <p>Esse sistema de <em>livro-razão distribuído</em> permite registrar transações entre duas partes que não
+                confiam uma na outra, suportado por uma rede de testemunhas ou <strong>validadores</strong>. E este é o
+                funcionamento básico do <strong><em>Blockchain</em></strong>.</p>
+            <h2>Blockchain: O protocolo da confiança</h2>
+            <p>Exemplificando de maneira simplificada, o sistema do Blockchain divide as informações de transações em
+                <em>&quot;blocos&quot;</em> que são <em>assinados digitalmente com criptografia</em> e encadeados. Dessa
+                forma, para assinar um bloco novo, é necessário <em>utilizar a assinatura do bloco anterior</em>.
+                Portanto, ao alterar um bloco antigo, uma nova cadeia totalmente diferente seria feita a partir dali,
+                gerando conflito nos <em>livros-razão</em>, tornando uma fraude impossível.</p>
+            <blockquote>
+                <p>Portanto, o <em>Blockchain</em> pode ser definido como um <em>livro-razão distribuído</em>,
+                    engenhosamente arquitetado para armazenar informações de forma permanente e inalterável, <em>sem
+                        precisar de uma autoridade central</em> para isso. Todo o processo é mantido em uma <em>rede de
+                        validadores</em> que seguem as mesmas regras e possuem o mesmo poder de decisão.</p>
+            </blockquote>
+            <h2>Trindade tecnológica da Blockchain</h2>
+            <ol>
+                <li>
+                    <p><strong><em>Criptografia</em></strong></p>
+                    <ul>
+                        <li>É utilizado um tipo específico de criptografia chamado <strong>hash</strong> ou
+                            <strong>hashing</strong>, na qual uma mensagem de qualquer tamanho é mapeada para uma
+                            mensagem de tamanho fixo, geralmente em hexadecimal.</li>
+                        <li>O <strong>hash</strong> é utilizado para assinar as transações, garantindo identidade e
+                            autenticidade, e também é utilizada para <strong>&quot;selar&quot;</strong> todo o bloco de
+                            transações, sendo que esse hash é propagado para o próximo bloco, gerando um encadeamento
+                            perfeito.</li>
+                        <li>É graças à função <strong>hash</strong> que um Blockchain torna-se autenticável e imutável.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p><strong><em>Redes ponto a ponto (P2P Networks)</em></strong> </p>
+                    <ul>
+                        <li>A maior quebra de paradigma da tecnologia blockchain é a <strong>descentralização do
+                                sistema</strong>, que funciona de forma distribuída.</li>
+                        <li>Contudo, a forma principal de operação das redes de computadores é o modelo
+                            <em>centralizado</em>, onde um servidor (ou servidores) central/centrais concentram as
+                            decisões e regras, e as máquinas cliente obedecem o nó central.</li>
+                        <li>
+                            <p>Porém, essa não é a única forma de operar. Existem as <strong>Redes P2P</strong>, onde
+                                todos os membros da rede são <strong>servidores e clientes</strong> ao mesmo tempo. As
+                                requisições não passam necessariamente por nós centrais, pois seus membros trocam dados
+                                diretamente e coordenam suas ações em consenso.
+                                <strong><em>Exemplo:</em></strong>
+                                ![[Pasted image 20220927172320.png]]
+                            </p>
+                        </li>
+                        <li>
+                            <p>Repare que <strong>não há hierarquia</strong> nesse tipo de rede; todos são membros e
+                                seguem as mesmas regras. Um forte exemplo do uso de <strong>Rede P2P</strong> é o
+                                <strong>Torrent</strong>, que não pode ser parado ou censurado.</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p><strong><em>Software Livre e de Código-fonte aberto</em></strong></p>
+                    <ul>
+                        <li>O <em>código-fonte aberto</em> é fundamental para a tecnologia Blockchain pois gera um
+                            sistema menos vulnerável a falhas e dá a liberdade de todos poderem <em>auditar o
+                                software</em> para entender e ter plena certeza de como ele funciona.</li>
+                        <li>Graças ao <em>software livre</em>, um ecossistema diverso é criado girando em torno desse
+                            código, como é o exemplo de criptomoedas que são derivações do código original do Bitcoin.
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+            <h2>Implementação do Blockchain</h2>
+            <p>A implementação do Blockchain pode ser feita em diversos sistemas, como por exemplo: <em>Registro de
+                    venda de imóveis, rastreio de bens, direitos autorais, etc</em>. Sua implementação trás benefícios,
+                sendo estes:</p>
+            <ul>
+                <li><strong><em>Descentralização do poder;</em></strong></li>
+                <li><strong><em>Imutabilidade;</em></strong></li>
+                <li><strong><em>Auditabilidade;</em></strong></li>
+                <li><strong><em>Resistência à censura;</em></strong></li>
+                <li><strong><em>Resiliência;</em></strong></li>
+                <li><strong><em>Múltiplas cópias de segurança.</em></strong></li>
+            </ul>
+            <h2>Conclusão</h2>
+            <p>A tecnologia Blockchain possui um enorme potencial transformador e pode revolucionar tudo o que pensamos
+                sobre sistemas confiáveis nos próximos anos. Contudo, está longe de ser a solução para todos os
+                problemas, além de ser uma tecnologia que ainda deve atingir sua maturidade nos próximos anos.</p>
+            <hr>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

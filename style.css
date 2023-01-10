@@ -1,0 +1,38 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: lightsteelblue;
+    margin: 0px;
+    font-size: 11pt;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+h1 {
+    border-bottom: grey 1px solid;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+h2 {
+    border-bottom: grey 1px solid;
+    font: 300;
+    margin-bottom: 15px;
+}
+
+div#main {
+    margin: auto;
+    width: 60em;
+	background-color: white;
+	border: white 2em solid;
+    border-top: white 10px solid;
+    text-align: left;
+}
+
+a:link, a:visited {
+	font-weight: 600;
+	text-decoration: none;
+}
